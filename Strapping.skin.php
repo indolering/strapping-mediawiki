@@ -447,9 +447,10 @@ class StrappingTemplate extends BaseTemplate {
           if ( !array_key_exists('va-edit', $this->data['content_actions']) ) {
             break;
           }
-          $navTemp = $this->data['content_actions']['va-edit'];
-          
-          if ($navTemp) { ?>
+          $navTemp = $this->data['content_actions']['va-edit']; ?>
+           <!-- <?php print_r($this->data['content_actions']['va-edit']) ?> va-edit -->
+            <!-- <?php print_r($this->data['content_actions']) ?> hello world data['content_actions'] -->
+         <?php if ($navTemp) { ?>
             <!-- <?php print_r($this->data['content_actions']) ?> hello world ******* -->
             <div class="actions pull-left nav">
                 <a id="b-edit" href="<?php echo $navTemp['href']; ?>" class="btn"><i class="icon-edit"></i> <?php echo $navTemp['text']; ?></a>
@@ -469,8 +470,7 @@ class StrappingTemplate extends BaseTemplate {
                 <a id="b-edit" href="<?php echo $navTemp['href']; ?>" class="btn">
                   <?php if (!array_key_exists('va-edit', $this->data['content_actions'])) {?>
                      <i class="icon-edit"></i> 
-                  <?php }
-                       echo $navTemp['text']; ?></a>
+                  <?php } echo $navTemp['text']; ?></a>
             </div>
           <?php } 
         break;
