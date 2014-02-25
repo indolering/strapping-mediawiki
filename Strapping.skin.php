@@ -443,13 +443,13 @@ class StrappingTemplate extends BaseTemplate {
    
     <!-- <?php print_r($this->data['content_actions']) ?> hello world data['content_actions'] -->
      <!-- <?php print_r($this->data['content_actions']['va-edit']) ?> va-edit -->
-      <!-- <?php print_r($elements) ?> va-edit -->
+      <!-- <?php print_r($elements) ?> elements -->
     <?php
     foreach ( $elements as $name => $element ) {
       echo "\n<!-- {$name} -->\n";
       switch ( $element ) {
 
-        case 'VA-EDIT':
+        case 'VE-EDIT':
           if ( !array_key_exists('va-edit', $this->data['content_actions']) ) {
             break;
           }
