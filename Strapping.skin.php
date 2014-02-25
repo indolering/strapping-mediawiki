@@ -473,7 +473,7 @@ class StrappingTemplate extends BaseTemplate {
                 <?php 
                 foreach ( $theData as $link ) {
                   # Skip a few redundant links
-                  if (preg_match('/^ca-(view|edit)$/', $link['id'])) { continue; }
+                  if (preg_match('/^ca-(view|edit|ve-edit)$/', $link['id'])) { continue; }
 
                   ?><li<?php echo $link['attributes'] ?>><a href="<?php echo htmlspecialchars( $link['href'] ) ?>" <?php echo $link['key'] ?> tabindex="-1"><?php echo htmlspecialchars( $link['text'] ) ?></a></li><?php
                 }
