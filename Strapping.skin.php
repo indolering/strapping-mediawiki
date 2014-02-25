@@ -439,6 +439,12 @@ class StrappingTemplate extends BaseTemplate {
       $elements = array_reverse( $elements );
     }
     // Render elements
+    ?> 
+   
+    <!-- <?php print_r($this->data['content_actions']) ?> hello world data['content_actions'] -->
+     <!-- <?php print_r($this->data['content_actions']['va-edit']) ?> va-edit -->
+      <!-- <?php print_r($elements) ?> va-edit -->
+    <?php
     foreach ( $elements as $name => $element ) {
       echo "\n<!-- {$name} -->\n";
       switch ( $element ) {
@@ -448,8 +454,7 @@ class StrappingTemplate extends BaseTemplate {
             break;
           }
           $navTemp = $this->data['content_actions']['va-edit']; ?>
-           <!-- <?php print_r($this->data['content_actions']['va-edit']) ?> va-edit -->
-            <!-- <?php print_r($this->data['content_actions']) ?> hello world data['content_actions'] -->
+
          <?php if ($navTemp) { ?>
             <!-- <?php print_r($this->data['content_actions']) ?> hello world ******* -->
             <div class="actions pull-left nav">
