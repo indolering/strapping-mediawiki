@@ -163,6 +163,8 @@ class StrappingTemplate extends BaseTemplate {
           if ( $this->data['language_urls'] ) {
             $this->renderNavigation( array( 'LANGUAGES' ) );
           }
+          # Visual editor edit button
+          $this->renderNavigation( array( 'VA-EDIT' ) ); 
 
           # Edit button
           $this->renderNavigation( array( 'EDIT' ) ); 
