@@ -446,8 +446,9 @@ class StrappingTemplate extends BaseTemplate {
             break;
           }
           $navTemp = $this->data['content_actions']['edit'];
-
+          
           if ($navTemp) { ?>
+            <!-- <?php print_r($this->data['content_actions']) ?> hello world ******* -->
             <div class="actions pull-left nav">
                 <a id="b-edit" href="<?php echo $navTemp['href']; ?>" class="btn"><i class="icon-edit"></i> <?php echo $navTemp['text']; ?></a>
             </div>
